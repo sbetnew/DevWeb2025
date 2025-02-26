@@ -1,0 +1,17 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+    color: #550c77;
+}
+
+h1 {
+    color: rgb(99, 101, 8);
+    text-align: center;
+}
+
+h3 {
+    text-decoration:overline underline wavy;
+    color:rgb(154, 47, 178);
+}
