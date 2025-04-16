@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercícios JavaScript</title>
+</head>
+<body>
+  <h1>Exercícios JavaScript - Parte 2 e Parte 3</h1>
+
+  <script>
+    // Exercício 8: Saudação personalizada
+    const nome = prompt("Qual o seu nome?");
+    document.write("<h2>8. Saudação personalizada</h2>");
+    document.write(`<p>Bem-vindo(a), ${nome}!</p>`);
+
+    // Exercício 9: Conversão de temperatura
+    const celsius = parseFloat(prompt("Digite a temperatura em graus Celsius:"));
+    const fahrenheit = (celsius * 9/5) + 32;
+    document.write("<h2>9. Conversão de temperatura</h2>");
+    document.write(`<p>${celsius}°C equivale a ${fahrenheit.toFixed(2)}°F</p>`);
+
+    // Exercício 10: Calculadora simples
+    const num1 = parseFloat(prompt("Digite o primeiro número:"));
+    const num2 = parseFloat(prompt("Digite o segundo número:"));
+    document.write("<h2>10. Calculadora Simples</h2>");
+    document.write(`<p>Adição: ${num1 + num2}</p>`);
+    document.write(`<p>Subtração: ${num1 - num2}</p>`);
+    document.write(`<p>Multiplicação: ${num1 * num2}</p>`);
+    document.write(`<p>Divisão: ${num2 !== 0 ? (num1 / num2).toFixed(2) : 'Não é possível dividir por zero'}</p>`);
+
+    // Exercício 11: Verificação de maioridade
+    const idade = parseInt(prompt("Digite sua idade:"));
+    document.write("<h2>11. Verificação de Maioridade</h2>");
+    document.write(`<p>Você é ${idade >= 18 ? 'maior' : 'menor'} de idade.</p>`);
+
+    // Exercício 12: Cálculo de desconto
+    const precoOriginal = parseFloat(prompt("Digite o preço original do produto:"));
+    const desconto = parseFloat(prompt("Digite a porcentagem de desconto (sem o %):"));
+    const precoFinal = precoOriginal * (1 - (desconto / 100));
+    document.write("<h2>12. Cálculo de Desconto</h2>");
+    document.write(`<p>Preço final com ${desconto}% de desconto: R$ ${precoFinal.toFixed(2)}</p>`);
+
+    // Exercício 13: Conversão de moedas
+    const reais = parseFloat(prompt("Digite um valor em reais (BRL):"));
+    const cotacaoUSD = 5.00;
+    const dolares = reais / cotacaoUSD;
+    document.write("<h2>13. Conversão de Moeda</h2>");
+    document.write(`<p>R$ ${reais.toFixed(2)} equivalem a US$ ${dolares.toFixed(2)} (cotação: 1 USD = R$ 5,00)</p>`);
+  </script>
+</body>
+</html>

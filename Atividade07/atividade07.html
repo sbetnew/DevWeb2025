@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercícios JavaScript - DOM e Eventos</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f4f4f4; }
+    section { background: #fff; padding: 15px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    h2 { color: #333; }
+    input, button, textarea { display: block; margin: 10px 0; padding: 8px; font-size: 14px; }
+    .contador { font-size: 24px; margin: 10px 0; }
+  </style>
+</head>
+<body>
+  <h1>Exercícios JavaScript - DOM e Eventos</h1>
+
+  <section>
+    <h2>1. O que é o DOM?</h2>
+    <p>O DOM (Document Object Model) é a representação da estrutura de uma página HTML como um objeto em árvore, permitindo que linguagens como JavaScript acessem, manipulem e modifiquem os elementos da página dinamicamente.</p>
+  </section>
+
+  <section>
+    <h2>2. Diferença entre getElementById e querySelector</h2>
+    <p><strong>getElementById:</strong> seleciona um elemento pelo seu ID.<br>
+       <strong>querySelector:</strong> seleciona o primeiro elemento que corresponde a um seletor CSS (pode ser classe, ID, tag).</p>
+  </section>
+
+  <section>
+    <h2>3. O que são eventos?</h2>
+    <p>Eventos são ações que ocorrem na página (ex: clique, envio de formulário, digitação). Exemplos: <code>click</code>, <code>mouseover</code>, <code>keydown</code>.</p>
+  </section>
+
+  <section>
+    <h2>4. Diferença entre innerText e innerHTML</h2>
+    <p><strong>innerText:</strong> retorna apenas o texto visível do elemento.<br>
+       <strong>innerHTML:</strong> retorna o conteúdo HTML (incluindo tags) dentro do elemento.</p>
+  </section>
+
+  <section>
+    <h2>5. Alterar estilo via JavaScript</h2>
+    <p>Podemos usar a propriedade <code>style</code> do elemento. Ex: <code>element.style.backgroundColor = "blue";</code></p>
+  </section>
+
+  <section>
+    <h2>6. Mudar a cor de fundo ao clicar</h2>
+    <button id="mudarCor">Mudar Cor de Fundo</button>
+  </section>
+
+  <section>
+    <h2>7. Exibir texto digitado</h2>
+    <input type="text" id="entradaTexto" placeholder="Digite algo">
+    <button id="mostrarTexto">Mostrar</button>
+    <p id="textoSaida"></p>
+  </section>
+
+  <section>
+    <h2>8. Contador (+ / -)</h2>
+    <button id="diminuir">-</button>
+    <span class="contador" id="contador">0</span>
+    <button id="aumentar">+</button>
+  </section>
+
+  <section>
+    <h2>9. Mudar cor com Enter</h2>
+    <input type="text" id="corDigitada" placeholder="Digite uma cor (ex: red, #00ff00)">
+  </section>
+
+  <section>
+    <h2>10. Formulário com exibição de dados</h2>
+    <form id="formulario">
+      <input type="text" id="nome" placeholder="Nome" required>
+      <input type="email" id="email" placeholder="E-mail" required>
+      <textarea id="mensagem" placeholder="Mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <div id="resposta"></div>
+  </section>
+
+  <script>
+    // Exercício 6
+    document.getElementById("mudarCor").addEventListener("click", () => {
+      document.body.style.backgroundColor = "#d0f0c0";
+    });
+
+    // Exercício 7
+    document.getElementById("mostrarTexto").addEventListener("click", () => {
+      const texto = document.getElementById("entradaTexto").value;
+      document.getElementById("textoSaida").innerText = texto;
+    });
+
+    // Exercício 8
+    let valorContador = 0;
+    document.getElementById("aumentar").addEventListener("click", () => {
+      valorContador++;
+      document.getElementById("contador").innerText = valorContador;
+    });
+    document.getElementById("diminuir").addEventListener("click", () => {
+      valorContador--;
+      document.getElementById("contador").innerText = valorContador;
+    });
+
+    // Exercício 9
+    document.getElementById("corDigitada").addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        document.body.style.backgroundColor = e.target.value;
+      }
+    });
+
+    // Exercício 10
+    document.getElementById("formulario").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const nome = document.getElementById("nome").value;
+      const email = document.getElementById("email").value;
+      const mensagem = document.getElementById("mensagem").value;
+      const resposta = `<p><strong>Nome:</strong> ${nome}</p><p><strong>Email:</strong> ${email}</p><p><strong>Mensagem:</strong> ${mensagem}</p>`;
+      document.getElementById("resposta").innerHTML = resposta;
+    });
+  </script>
+</body>
+</html>

@@ -16,14 +16,18 @@
     <script>
         let result = document.querySelector('#res');
         let bt = document.querySelector('#btn');
+        
         bt.addEventListener('click', somar);
 
+        // Função é responsável por buscar os valores
         function somar(){
             let n1 = Number(document.querySelector('#nr1').value);
             let n2 = Number(document.querySelector('#nr2').value);
             let soma = n1 + n2;
             result.innerText = `A soma entre ${n1} + ${n2} = ${soma}`;
         }
+
+        
     </script>
 </body>
 </html>

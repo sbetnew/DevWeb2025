@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <h1>Funções</h1>
+
+
+    <script>
+
+        // ESCOPO VARIÁVEIS
+        // Global ou Local
+
+        let nome = 'Maria';  // Global - Public
+
+        function mostrarNome(){
+            let nome = 'João';  // Local - Private
+            alert(nome); // João
+        }
+
+        mostrarNome();
+        alert(nome); // Maria
+
+    </script>
+</body>
+</html>
