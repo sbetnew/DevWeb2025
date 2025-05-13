@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e9e6d6;
+    text-align: center;
+}
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    background: rgb(246, 244, 244);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    margin-bottom: 10px;
+    color:#333;
+}
+img{
+    width: 32px;
+}
+.input-container{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+#task-input {
+    flex: 1;
+    padding: 8px;
+}
+button {
+    padding: 8px;
+    cursor: pointer;
+    border: none;
+    background: #d9d6b6;
+    color: rgb(94, 90, 46);
+    border-radius: 4px;
+}
+.filters{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+.filters button {
+    margin: 5px;
+    background: #dadbcd;
+    width: 100px;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    color:#333;
+}
+li {
+    display: flex;
+    justify-content: space-between;
+    background: #ddd;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 4px;
+}
+.btnTasks{
+    width: 20px;
+}
+.edit{
+    background-color: rgb(198, 241, 145);
+}
+.delete{
+    background-color: rgb(236, 165, 165);
+}
+.completed {
+    text-decoration: line-through;
+    color: rgb(46, 106, 46);
+}
+.dark-mode {
+    background-color: #333;
+}
